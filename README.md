@@ -1,70 +1,77 @@
-# cell-segmentation-using-yolov-8
-Cell-Segmentation-Using-Yolo-v8
+# Cell Segmentation Using YOLO v8
 
+This project focuses on cell segmentation using YOLO v8, a state-of-the-art deep learning model for object detection and segmentation. The model aims to segment cells in images accurately and efficiently.
 
 ## Workflows
 
-1. constants
-2. entity
-3. components
-4. pipelines
-5. app.py
+1. **Constants**: Contains constant values used across the project.
+2. **Entity**: Defines the entity classes and data structures.
+3. **Components**: Contains various components required for the project.
+4. **Pipelines**: Describes the data pipelines and workflows.
+5. **App.py**: Main application file that ties everything together.
 
-# How to run?
-### STEPS:
+## How to Run?
 
-Clone the repository
+### Steps
 
-```bash
-git clone https://github.com/yash-raj202134/cell-segmentation-using-yolov-8.git
-```
-### STEP 01- Create a conda environment after opening the repository
+1. **Clone the repository**:
 
-```bash
-conda create -n cell python=3.8 -y
-```
+    ```bash
+    git clone https://github.com/yash-raj202134/cell-segmentation-using-yolov-8.git
+    ```
 
-```bash
-conda activate cell
-```
+2. **Create a conda environment**:
 
+    ```bash
+    conda create -n cell python=3.8 -y
+    conda activate cell
+    ```
 
-### STEP 02- install the requirements
-```bash
-pip install -r requirements.txt
-```
+3. **Install the requirements**:
 
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-```bash
-# Finally run the following command
-python app.py
-```
+4. **Run the application**:
 
-Now,
-```bash
-open up you local host and port
-```
+    ```bash
+    python app.py
+    ```
 
+5. **Access the application**:
 
-# AZURE-CICD-Deployment-with-Github-Actions
+    Open up your local host and port in a web browser to access the application.
 
-## Save pass:
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+## Azure CI/CD Deployment with GitHub Actions
 
+### Run from Terminal
 
-## Run from terminal:
+1. **Build the Docker image**:
 
-docker build -t cellseg.azurecr.io/cell:latest .
+    ```bash
+    docker build -t cellseg.azurecr.io/cell:latest .
+    ```
 
-docker login cellseg.azurecr.io
+2. **Log in to Azure Container Registry**:
 
-docker push cellseg.azurecr.io/cell:latest
+    ```bash
+    docker login cellseg.azurecr.io
+    ```
 
+3. **Push the Docker image**:
 
-## Deployment Steps:
+    ```bash
+    docker push cellseg.azurecr.io/cell:latest
+    ```
 
-1. Build the Docker image of the Source Code
-2. Push the Docker image to Container Registry
-3. Launch the Web App Server in Azure 
-4. Pull the Docker image from the container registry to Web App server and run 
+### Deployment Steps
 
+1. Build the Docker image of the source code.
+2. Push the Docker image to Azure Container Registry.
+3. Launch the web app server in Azure.
+4. Pull the Docker image from the container registry to the web app server and run the application.
+
+## Save Pass
+
+Save pass: `XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX`
